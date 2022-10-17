@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/back">
+
+
+    <ImageView
+        android:id="@+id/imageViewTable"
+        android:layout_width="359dp"
+        android:layout_height="233dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/table_icon" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="301dp"
+        android:layout_height="173dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewTable"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewTable"
+        app:layout_constraintStart_toStartOf="@+id/imageViewTable"
+        app:layout_constraintTop_toTopOf="@+id/imageViewTable">
+
+        <include layout="@layout/center" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_bet" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewLabel"
+        android:layout_width="278dp"
+        android:layout_height="91dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon_label" />
+
+    <ImageView
+        android:id="@+id/imageViewGold"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewTable"
+        app:layout_constraintStart_toStartOf="@+id/imageViewLabel"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@drawable/icon_money" />
+
+    <TextView
+        android:id="@+id/textViewCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewTable"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewLabel"
+        app:layout_constraintStart_toEndOf="@+id/imageViewGold"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/imageViewCountBet"
+        android:layout_width="323dp"
+        android:layout_height="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icon_label" />
+
+    <ImageView
+        android:id="@+id/imageViewSpin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/icon_bet" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="BET"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCountBet"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCountBet"
+        app:layout_constraintVertical_bias="0.589" />
+
+    <ImageView
+        android:id="@+id/imageViewPlus"
+        android:layout_width="45dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:srcCompat="@drawable/icon_bet" />
+
+    <ImageView
+        android:id="@+id/imageViewMinus"
+        android:layout_width="48dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCountBet"
+        app:srcCompat="@drawable/icon_bet" />
+
+    <TextView
+        android:id="@+id/textViewBet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewMinus"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlus"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCountBet" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPIIN"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewSpin"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewSpin"
+        app:layout_constraintStart_toStartOf="@+id/imageViewSpin"
+        app:layout_constraintTop_toTopOf="@+id/imageViewSpin" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPlus"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPlus"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlus"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlus"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewMinus"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewMinus"
+        app:layout_constraintStart_toStartOf="@+id/imageViewMinus"
+        app:layout_constraintTop_toTopOf="@+id/imageViewMinus"
+        app:srcCompat="@drawable/ic_baseline_remove_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
